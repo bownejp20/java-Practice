@@ -1,28 +1,28 @@
 package football;
 
 public class Match{
-    Object team1;
-    Object team2;
+    Team team1;
+    Team team2;
     int score1;
     int score2;
-    Object winner;
-    public Match(Object team1, Object team2, int score1, int score2, Object winner){
+    Team winner;
+    public Match(Team team1, Team team2, int score1, int score2, Team winner){
         this.team1 = team1;
         this.team2 = team2;
         this.score1 = score1;
         this.score2 = score2;
         this.winner = winner;
     }
-    public Object getTeam1(){
+    public Team getTeam1(){
         return this.team1;
     }
-    public void setTeam1(Object team1){
+    public void setTeam1(Team team1){
         this.team1 = team1;
     }
-    public Object getTeam2(){
+    public Team getTeam2(){
         return this.team2;
     }
-    public void setTeam2(Object team2){
+    public void setTeam2(Team team2){
         this.team2 = team2;
     }
     public int getScore1(){
@@ -38,11 +38,15 @@ public class Match{
         this.score2 = score2;
     }
 
-    public Object getWinner() {
+    public Team getWinner() {
         return winner;
     }
 
-    public void setWinner(Object winner) {
+    public void setWinner(Team winner) {
         this.winner = winner;
+    }
+    public String getMatchInfo(){
+//        return this.team1.getName() + " " + this.team2.getName()+ " " + this.score1 + " " + this.score2 + " " + this.winner.getName();
+        return String.format("%s : %d, %s : %d, %s", this.team1.getName(), this.score1, this.team2.getName(), this.score2, this.winner.getName());
     }
 }

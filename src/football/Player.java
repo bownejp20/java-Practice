@@ -4,8 +4,8 @@ public class Player{
     String name;
     int age;
     String position;
-    Object team;
-    public Player(String name, int age, String position, Object team){
+    Team team;
+    public Player(String name, int age, String position, Team team){
         this.name = name;
         this.age = age;
         this.position = position;
@@ -32,7 +32,10 @@ public class Player{
     public Object getTeam(){
         return this.team;
     }
-    public void setTeam(Object team){
+    public void setTeam(Team team){
         this.team = team;
+    }
+    public String getPlayerInfo(){
+        return this.name + " " + this.age + " " + this.position + " " + this.team.getName();
     }
 }

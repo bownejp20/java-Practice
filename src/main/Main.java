@@ -37,7 +37,13 @@ public class Main {
 //        System.out.println(fall.getEnrollmentDetails());
 //    }
     public static void main(String[] args){
-
+        Team falcons = new Team("Falcons", "John");
+        System.out.println(falcons.getTeamDetails());
+        Player john = new Player("John", 24, "kicker", falcons);
+        System.out.println(john.getPlayerInfo());
+        Team panther = new Team("Panther", "Tommy");
+        Match today = new Match(panther, falcons, 21, 30, falcons);
+        System.out.println(today.getMatchInfo());
     }
 
 
